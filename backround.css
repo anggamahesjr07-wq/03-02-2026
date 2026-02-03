@@ -1,0 +1,59 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+/* JUDUL */
+h3 {
+    margin: 20px 0 10px;
+}
+
+/*  LAYER DASAR */
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* KOLOM */
+[class*="col-"] {
+    padding: 15px;
+    color: white;               /* TEXT PUTIH */
+    font-size: 14px;
+}
+
+/* LAYER 12 SYSTEM (DESKTOP) */
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-6 { width: 50%; }
+
+/* WARNA BACKGROUND (PERSIS MODUL) */
+.merah { background-color: #6b001f; }   /* maroon */
+.biru  { background-color: #0b2c5d; }   /* navy */
+.hijau { background-color: #0b4f0b; }   /* dark green */
+
+/* ===== TABLET ===== */
+@media only screen and (max-width: 768px) {
+    .col-3 {
+        width: 50%;     /* Grid 4 jadi 2x2 */
+    }
+    .col-4,
+    .col-6 {
+        width: 100%;    /* Grid 3 & 2 turun ke bawah */
+    }
+}
+
+/* ===== MOBILE ===== */
+@media only screen and (max-width: 480px) {
+    .col-3,
+    .col-4,
+    .col-6 {
+        width: 100%;    /* Semua 1 kolom */
+    }
+}
