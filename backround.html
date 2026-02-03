@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS DASAR XR6</title>
+
+<style>
+* { box-sizing: border-box; }
+body { font-family: Arial; background:#ddd; margin:20px; }
+
+.row { display:flex; flex-wrap:wrap; }
+
+.col-3 { width:25%; }
+.col-4 { width:33.33%; }
+.col-6 { width:50%; }
+
+.box {
+    padding:15px;
+    color:white;
+    font-size:16px;
+}
+
+.merah { background:#6b001f; }
+.biru  { background:#0b2c5d; }
+.hijau { background:#0b4f0b; }
+
+@media(max-width:768px){
+  .col-3 { width:50%; }
+  .col-4, .col-6 { width:100%; }
+}
+
+@media(max-width:480px){
+  .col-3, .col-4, .col-6 { width:100%; }
+}
+</style>
+
+</head>
+<body>
+
+<h3>layer 3</h3>
+<div class="row">
+  <div class="col-3 box merah">ATITUDE IS EVERYTHING 3</div>
+  <div class="col-3 box biru">ATITUDE IS EVERYTHING 3</div>
+  <div class="col-3 box hijau">ATITUDE IS EVERYTHING 3</div>
+  <div class="col-3 box merah">ATITUDE IS EVERYTHING 3</div>
+</div>
+
+<h3>layer 2</h3>
+<div class="row">
+  <div class="col-4 box hijau">ATITUDE IS EVERYTHING 2</div>
+  <div class="col-4 box merah">ATITUDE IS EVERYTHING 2</div>
+  <div class="col-4 box biru">ATITUDE IS EVERYTHING 2</div>
+</div>
+
+<h3>layer 1</h3>
+<div class="row">
+  <div class="col-6 box hijau">ATITUDE IS EVERYTHING 1</div>
+  <div class="col-6 box merah">ATITUDE IS EVERYTHING 1</div>
+</div>
+
+</body>
+</html>
